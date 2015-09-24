@@ -8,7 +8,7 @@ Package.describe({
     // Short two-sentence summary.
     summary: "A point to point queue system",
     // Version number.
-    version: "1.0.0",
+    version: "1.0.1",
     // Optional.  Default is package directory name.
     name: "cashbit:vortex",
     // Optional github URL to your source repository.
