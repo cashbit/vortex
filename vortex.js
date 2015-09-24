@@ -62,6 +62,10 @@ vortex = function (collectionName,config,callback){
             },
             function() {
                 console.log("subscribed to " + this.name + " on:",remoteConfig.hostname) ;
+            },
+            function(err){
+                console.log("error subscribing to " + remoteConfig.remoteCollectionName) ;
+                console.log(err) ;
             }
         );
 
@@ -129,6 +133,7 @@ vortex = function (collectionName,config,callback){
         }) ;
 
         Meteor.publish(collectionName, function (criteria) {
+            console.log("Received subscription on",collectionName,"with criteria",criteria) ;
             return vortexLocalCollection.find(criteria);
         });
     }
